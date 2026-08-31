@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ .Site.Title }} — reStructuredText in pure Go.</title>
+<meta name="description" content="reStructuredText in pure Go. Pure Go, CGO_ENABLED=0.">
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+<link rel="stylesheet" href="{{ "css/brand.css" | relURL }}">
+<script src="{{ "js/theme.js" | relURL }}"></script>
+</head><body>
+<section class="hero">
+  <button id="themebtn" class="theme" type="button">Theme: System</button>
+  <img src="{{ "img/go-docutils-white.png" | relURL }}" alt="go-docutils">
+  <h1>go-docutils</h1>
+  <p>reStructuredText in pure Go.</p>
+  <div class="btns">
+    <a class="btn btn-solid" href="https://pkg.go.dev/github.com/go-docutils/docutils">Reference</a>
+    <a class="btn btn-ghost" href="https://github.com/go-docutils">GitHub</a>
+  </div>
+</section>
+<div class="wrap">
+  <div class="panel">
+    <h2>What is go-docutils?</h2>
+    <p>go-docutils is the docutils core rewritten in Go with CGO_ENABLED=0: a reStructuredText parser and the doctree it produces, which the LaTeX and PDF path is built on. It reads reST, and it also writes it — autodoc renders a Go package's own API documentation as reST to feed the same pipeline.</p>
+  </div>
+  <h2 class="section">Packages</h2>
+  <p class="sub">{{ len hugo.Data.pkgs.packages }} module(s) in this organisation.</p>
+  <div class="grid">
+    {{ range hugo.Data.pkgs.packages }}
+    <div class="card">
+      <div class="chip">{{ .chip }}</div>
+      <div class="nm">{{ .name }}</div>
+      <div class="ds">{{ .desc }}</div>
+      <div class="lk"><a href="{{ .url }}">GitHub</a> · <a href="{{ .doc }}">pkg.go.dev</a></div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+<footer>Built with Hugo · Pure Go, CGO=0 · Branding from <a href="https://github.com/go-docutils/brand">go-docutils/brand</a></footer>
+</body></html>

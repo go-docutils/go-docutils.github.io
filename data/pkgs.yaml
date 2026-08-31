@@ -1,0 +1,3 @@
+packages:
+  - { name: "docutils", chip: "D", desc: "reStructuredText parser and doctree — the docutils-equivalent core.", url: "https://github.com/go-docutils/docutils", doc: "https://pkg.go.dev/github.com/go-docutils/docutils" }
+  - { name: "autodoc", chip: "A", desc: "Go API documentation extraction (go/doc, go/doc/comment) rendered as reST.", url: "https://github.com/go-docutils/autodoc", doc: "https://pkg.go.dev/github.com/go-docutils/autodoc" }

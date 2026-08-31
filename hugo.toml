@@ -1,0 +1,4 @@
+baseURL = "https://go-docutils.github.io/"
+locale = "en-us"
+title = "go-docutils"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
